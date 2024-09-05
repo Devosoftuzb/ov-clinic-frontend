@@ -1,0 +1,71 @@
+.RegCatItem{
+
+}
+.RegCatItem__header{
+    background-color: var(--bg-modal);
+    padding: 20px;
+}
+.RegCatItem__header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.RegCatItem__header__logo{
+    width: 100px;
+}
+.RegCatItem__btn{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #2563EB;
+    padding: 10px 30px;
+    background-color: #2563EB;
+    color: white;
+    font-size: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.RegCatItem__btn__svg{
+    font-size: 20px;
+    fill: white;
+}
+.RegCatItem__btn:hover{
+    background-color: transparent;
+    color: #2563EB;
+    .RegCatItem__btn__svg{
+        fill: #2563EB;
+    }
+}
+.RegCatItem__header__wrapper__grdi{
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+.RegCatItem__main{
+    padding:10px 20px;
+}
+@media(max-width:480px){
+    .RegCatItem__btn span{
+        display: none;
+        padding: 10px;
+    }
+    .RegCatItem__btn__svg span{
+        display: none;
+        padding: 10px;
+    }
+ .Register__main__out__btn2__svg2{
+    font-size: 20px;
+ }
+
+    .RegCatItem__header__wrapper__grdi{
+        gap: 10px;
+    }
+}
+@media(max-width:300px){
+    .RegCatItem__header img{
+        display: none;
+ }
+}

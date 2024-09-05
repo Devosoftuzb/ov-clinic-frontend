@@ -1,0 +1,69 @@
+
+.Doctor__main{
+    padding: 10px 30px;
+}
+.doctor__main__search{
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px; 
+}
+.Doctor__main__wrapper{
+    display: flex;
+    /* align-items: center; */
+    gap: 10px;
+}
+.Kassa__info{
+    height: fit-content;
+}
+.Kassa__info form {
+    width: 100%;
+}
+.Kassa__info form textarea{
+    padding: 10px;
+    resize: none;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid #4C5569 !important;
+    outline-color: #2563EB;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.Kassa__info__submit{
+    width: 100%;
+}
+.doctor_letter_to_patent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.doctor_icons_print_down {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 20px 40px 0;
+}
+.doctor_icons_print_down svg:hover {
+    stroke: rgb(6, 6, 253);
+}
+.doctor_icons_print_down button {
+    border: none;
+    background-color: transparent;
+}
+@media(max-width:1050px){
+    .Doctor__main{
+        padding: 5px;
+    }
+}
+@media(max-width:900px){
+    .Doctor__main__wrapper{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .doctor__info{
+        width: 100%;
+    }
+}

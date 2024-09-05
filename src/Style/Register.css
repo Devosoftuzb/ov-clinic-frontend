@@ -1,0 +1,373 @@
+.RegisterMain {
+    padding: 10px 30px;
+}
+
+.RegisterForm {
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+.register_ambulator_form {
+    max-width: 800px;
+}
+
+.register_statsionar_wrap {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 30px;
+}
+
+.register_checkbox_grid {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 30px;
+}
+.register_checkbox_grid label {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.Register__logo {
+    width: 100px;
+    height: 100px;
+}
+
+.Register__logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.RegisterForm h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: var(--bg-modal);
+}
+
+.RegisterForm label {
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.RegisterForm span {
+    display: block;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.RegisterForm input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #DCE1EF;
+    outline-color: #2563EB;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.RegisterForm button {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #2563EB;
+    padding: 10px 20px;
+    background-color: #2563EB;
+    color: white;
+    font-size: 15px;
+    transition: 0.5s;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.RegisterForm button:hover {
+    background-color: transparent;
+    color: #2563EB;
+}
+
+.RegisterForm__tf {
+    width: 20px !important;
+    height: 20px;
+    font-size: 150px;
+    cursor: pointer;
+}
+
+.activeBtn {
+    background-color: transparent !important;
+}
+
+.Register__history__table {
+    width: 100%;
+}
+
+.Register__history__table table {
+    width: 100%;
+}
+
+.Register__history__table table thead {
+    width: 100%;
+}
+
+.Register__history__table table tr {
+    width: 100%;
+}
+
+.Register__history__table table thead tr th {
+    background-color: #F8F8F8;
+    border: 1px solid #DCE1EF;
+    padding: 10px;
+}
+
+.Register__table__number {
+    width: 100px !important;
+}
+
+.Register__history__table {
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.Register__history__header {
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 36% 28% 28%;
+    gap: 30px;
+}
+
+.Register__history__table tbody td h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.Register__history__table tbody tr:hover {
+    background-color: #DCE1EF;
+    cursor: pointer;
+}
+
+.Register__history__header label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.Register__history__header input {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid var(--bg-modal);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    outline-color: #2563EB;
+}
+
+.Register__history__header #sort_by_date {
+    padding: 9px 10px !important;
+}
+
+.Register__history__header label button {
+    border: 2px solid var(--bg-modal);
+    padding: 6.5px;
+    background-color: transparent;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.Register__history__header label svg {
+    font-size: 20px;
+    color: var(--bg-modal);
+    fill: black
+}
+
+.Register__history__header h1 {
+    font-size: 22px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.Register__history__table a {
+    display: block;
+    width: 100%;
+}
+
+.Register__table__setings2 {
+    width: 200px;
+}
+
+.Register__table__setings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Register__table__setings svg {
+    font-size: 30px;
+    transform: translatex(180deg);
+}
+
+.Register__table__setings a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.register_history_pagin {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 20px auto 0;
+}
+
+.register_history_wrap {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register_history_pagin button {
+    padding: 8px 22px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+    background-color: silver;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: 10ms !important;
+}
+
+.register_history_pagin button:hover {
+    background-color: rgb(11, 7, 249);
+    transition: 500ms;
+    color: white;
+}
+
+.register_history_pagin button:active {
+    scale: 0.95;
+    transition: 10ms !important;
+}
+.register_statsionar_btns {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 30px;
+}
+
+@media(max-width:780px) {
+    .Register__history__header h1 {
+        margin-bottom: 12px;
+        font-size: 20px;
+    }
+
+    .Register__history__header {
+        grid-template-columns: 48% 48%;
+        gap: 15px;
+    }
+}
+
+@media(max-width:700px) {
+    .Register__table__setings2 {
+        width: 100px;
+    }
+    .register_statsionar_wrap {
+        grid-template-columns: 96%;
+        gap: 30px;
+    }
+}
+
+@media(max-width:620px) {
+    .Register__history__table h3 {
+        font-size: 12px;
+    }
+
+    .Register__table__number {
+        width: 60px !important;
+    }
+
+    .RegisterMain {
+        padding: 10px;
+    }
+
+    .Register__table__setings svg {
+        font-size: 20px;
+    }
+    .register_history_pagin button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
+@media(max-width:500px) {
+    .register_checkbox_grid {
+        grid-template-columns: 96%;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .register_statsionar_btns {
+        grid-template-columns: 96%;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .register_history_pagin p span {
+        display: none;
+    }
+}
+@media(max-width:425px) {
+    .Register__history__header {
+        grid-template-columns: 95%;
+        gap: 15px;
+    }
+    .RegisterForm h2 {
+        font-size: 26px;
+    }
+}
+
+@media(max-width:380px) {
+    .RegisterForm {
+        padding: 5px;
+    }
+    .register_history_wrap {
+        padding: 11px 11px;
+        justify-content: space-between;
+    }
+    .register_history_pagin button {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+}
+@media(max-width:350px) {
+    .register_history_pagin button {
+        display: none;
+    }
+    .register_history_pagin .pagin_right_icon {
+        width: 0;
+        height: 0;
+        border-top: 10px solid white;
+        border-left: 15px solid black;
+        border-bottom: 10px solid white;
+    }
+    .register_history_pagin .pagin_left_icon {
+        width: 0;
+        height: 0;
+        border-top: 10px solid white;
+        border-right: 15px solid black;
+        border-bottom: 10px solid white;
+    }
+}

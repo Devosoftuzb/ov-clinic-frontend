@@ -1,0 +1,27 @@
+.AdminRole{
+    margin-left: 300px;
+}
+@media(max-width:1000px){
+    .AdminRole{
+        margin-left: 0px;
+    }
+}
+@media(max-width:850px){
+    .admin__role h3{
+        font-size: 12px !important;
+    }
+    .admin__role__svg{
+        font-size: 18px !important;
+    }
+    .admin__role__num{
+        width: auto !important;
+    }
+}
+@media(max-width:500px){
+    .admin__role{
+        overflow-x:scroll;
+    }
+    .admin__role table{
+        width: 500px;
+    }
+}

@@ -1,0 +1,287 @@
+.AdminWorker{
+    margin-left: 300px;
+}
+.AdminWorker__main{
+    padding: 20px;
+}
+.AdminWorker__main__header{
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.AdminWorker__main__header h1{
+    color: var(--text-color);
+}
+.AdminWorker__main__header__button{
+    border-radius: 10px;
+    border: 2px solid #2563EB;
+    padding: 10px 20px;
+    background-color: #2563EB;
+    color: white;
+    font-size: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AdminWorker__main__header__button svg{
+    font-size: 30px;
+    fill:white;
+    transition: 0.5s;
+}
+.AdminWorker__main__header__button:hover{
+    background-color: transparent;
+    color: #2563EB;
+    .AdminWorker__main__header__button__svg{
+        fill: #2563EB;
+    }
+}
+.Admin__main__table{
+    margin-top: 20px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.Admin__main__table{
+    width: 100%;
+}
+.Admin__main__table table{
+    width: 100%;
+}
+.Admin__main__table table thead{
+    width: 100%;
+}
+.Admin__main__table table tr{
+    width: 100%;
+}
+
+.Admin__main__table table thead tr th{ 
+    background-color:#F8F8F8;
+    border: 1px solid #DCE1EF;
+    padding: 10px;
+}
+.Register__table__number{
+    width: 100px !important;
+}
+.Admin__main__table{
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+.Register__history__header{
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px; 
+}
+.Admin__main__table tbody td h3{
+    text-align: center;
+    padding: 10px;
+}
+.Admin__main__table tbody tr:hover{
+    background-color:#DCE1EF ;
+    cursor: pointer;
+}
+.Admin__main__footer__wrapper button{
+    padding: 10px;
+    background-color: #2563EB;
+    border-radius: 10px;
+    border: 1px solid #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.Admin__main__footer__wrapper button svg{
+    fill: white;
+    stroke: white;
+    font-size: 20px;
+}
+.Admin__main__footer{
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-top: 10px;
+}
+.Admin__main__footer__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Admin__main__footer__wrapper button:hover{
+    background-color: transparent;
+    .Admin__main__footer__svg{
+        fill: #2563EB;
+        stroke: #2563EB;
+    }
+}
+.Register__table__setings button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.Admin__main__table__edit:hover{
+   .Admin__main__table__edit__svg{
+    fill: #2563EB;
+   }
+}
+.Admin__main__table__delete:hover{
+    fill: red;
+}
+.Admin__modal__bg{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.808);
+    
+    display: none;
+}
+.Admin__modal__active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Admin__modal__content{
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;  
+    border-radius: 10px;
+}
+.Admin__modal__content__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Admin__modal__content__header button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2563EB;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.Admin__modal__content__header__svg{
+    fill: white;
+}
+.Admin__modal__content__header button:hover{
+    background-color: transparent;
+    .Admin__modal__content__header__svg{
+        fill: #2563EB;
+    }
+}
+.Admin__modal__content label{
+    width: 100% ;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+}
+.Admin__modal__content input,select{
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid #4C5569 !important;
+    outline-color: #2563EB;
+    
+}
+.Admin__modal__content select option  {
+cursor: pointer;
+}
+.Admin__modal__content form{
+    margin-top: 20px;
+}
+.Admin__modal__content h3{
+    color: var(--text-color);
+}
+.Admin__modal__content form button{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #2563EB;
+    color: white;
+    border: 2px solid #2563EB;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 15px;
+}
+.Admin__modal__content button:hover{
+    background-color: transparent;
+    color: #2563EB;
+}
+.admin__modal__delete{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.admin__modal__delete__wrapper button{
+    background-color: #2563EB;
+    padding: 10px;
+    border: 1px solid #2563EB;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    justify-content: center;
+    font-size: 15px;
+}
+.admin__modal__delete__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+@media(max-width:1000px){
+    .AdminWorker{
+        margin-left: 0px;
+    }
+    .Admin__modal__content{
+        width: 90%;
+    }
+}
+@media(max-width:520px){
+    .AdminWorker__main__header__button span{
+        display: none;
+    }
+    .AdminWorker__main__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .AdminWorker__main{
+        padding: 5px;
+    }
+}
+@media(max-width:380px){
+    .AdminWorker__main__header h1{
+        font-size: 25px;
+    }
+}
+@media(max-width:300px){
+    .AdminWorker__main__header h1{
+        display: none;
+    }
+}

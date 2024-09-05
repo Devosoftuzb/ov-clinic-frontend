@@ -1,0 +1,32 @@
+.DayDoctor__main{
+    padding: 10px 30px;
+}
+.DayDoctor__main__content{
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px; 
+}
+.DayDoctor__main__content h1{
+    color: var(--text-color);
+}
+.DayDoctor__grid{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+.DayDoctor__grid h3{
+    font-size: 22px;
+}
+.DayDoctor__grid span{
+    font-size: 20px;
+    color: var(--text-color);
+}
+@media(max-width:1000px){
+    .DayDoctor__main{
+        padding: 5px;
+    }
+}

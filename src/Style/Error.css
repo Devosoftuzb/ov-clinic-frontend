@@ -1,0 +1,37 @@
+.Error{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Error__wrapper h1{
+    color: var(--text-color);
+    font-size: 60px;
+}
+.Error__wrapper a{
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 2px solid var(--button-color);
+    transition: 0.5s;
+}
+.Error__wrapper a:hover{
+    background-color: transparent;
+    color: var(--button-color);
+}
+@media(max-width:319px){
+    .Error h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .Error__wrapper a{
+        font-size: 15px;
+    }
+}

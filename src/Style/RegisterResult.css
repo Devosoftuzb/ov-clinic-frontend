@@ -1,0 +1,141 @@
+
+.RegisterResult__main{
+    padding: 20px 30px;
+}
+.RegisterResult__main__item{
+    width: 100%;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    margin: 0 auto;
+    /* height: 90vh; */
+    margin-top: 20px;
+}
+.RegisterResult__main h1{
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.RegisterResult__main__item1__grid{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.RegisterResult__main__item1__grid h2{
+    color: var(--text-color);
+
+}
+.RegisterResult__main__item1__grid span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.RegisterResult__main__item table {
+    width: 100%;
+
+}
+.RegisterResult__main__item__table__num{
+    width: 100px;
+}
+.RegisterResult__main__item table thead tr th{
+    background-color:#F8F8F8;
+    border: 1px solid #DCE1EF;
+    padding: 5px;
+}
+.RegisterResult__main__item table tbody td h3{
+    text-align: center;
+}
+.RegisterResult__main__item table tbody td {
+    padding-top: 10px;
+}
+.RegisterReslt__main__btn{
+    padding: 10px 30px;
+    background-color: var(--button-color);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--button-color);
+    transition: 0.5s;
+    cursor: pointer;
+    display: inline-block;
+}
+.RegisterReslt__main__btn:hover{
+    background-color: transparent;
+    color: var(--button-color);
+}
+.RegisterResult__main__item__end{
+    width: 100%;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    margin: 0 auto;
+    /* height: 90vh; */
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.RegisteResult__main__item__end__btn{
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: red 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 30px;
+    display: block;
+    text-align: end;
+}
+.RegisteResult__main__item__end__btn:hover{
+    background-color: transparent;
+    color: var(--text-color);
+}
+.RegisteResult__main__item__end__btn__wrapper{
+    display:flex;
+    align-items: center;
+    justify-content: end;
+}
+@media(max-width:650px){
+    .RegisterResult__main__item table h3{
+        font-size: 15px;
+    }
+    .RegisterResult__main{
+        padding: 10px;
+    }
+    .RegisterResult__main__item{
+        padding: 10px 5px ;
+    }
+    .RegisterResult__main__item__end{
+        padding: 10px 5px;
+    }
+}
+@media(max-width:400px){
+    .RegisteResult__main__item__end__btn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .RegisterReslt__main__btn{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .RegisterResult__main h1{
+        font-size: 25px;
+    }
+    .RegisterResult__main__item1__grid h2{
+        font-size: 20px;
+    }
+    .RegisterResult__main__item1__grid span{
+        font-size: 18px;
+    }
+}

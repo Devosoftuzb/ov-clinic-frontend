@@ -1,0 +1,116 @@
+.Register__header{
+    background-color: var(--bg-modal);
+    width: 100%;
+    padding: 10px 30px;
+}
+.Register__logo h1{
+    color: white;
+}
+.Register__header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    /* width: 1200px   ;
+    margin:  0 auto; */
+}
+.Register__nav{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.Register__nav button{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* flex-direction: column; */
+    border-radius: 10px;
+    border: 2px solid var(--button-color);
+    background-color: var(--button-color);
+    /* color: white; */
+    cursor: pointer;
+    transition: 0.5s;
+}
+.Register__nav button:hover{
+    background-color: transparent;
+    /* color: var(--button-color); */
+}
+.Register__nav button span{
+    font-size: 18px;
+    color: white;
+}
+.Register__nav svg{
+    font-size: 22px;
+}
+.Register__header__out__btn{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    /* flex-direction: column; */
+    border-radius: 10px;
+    border: 2px solid rgb(212, 9, 9);
+    background-color: rgb(218, 4, 4);
+    /* color: white; */
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}
+.Register__header__out__btn:hover{
+    background-color: transparent;
+}
+.Register__header__out__btn span{
+    color: white;
+    font-size: 18px;
+}
+.Register__header__out__btn svg{
+    font-size: 22px;
+}
+.Register__header__logo{
+    width: 100px;
+}
+.Register__header__logo img{
+    width: 100%;
+}
+
+@media(max-width:1180px) and (min-width:950px) {
+    .Register__header button span {
+        font-size: 14px;
+    }
+    .Register__nav {
+        gap: 30px;
+    }
+    .Register__nav button {
+        padding: 8px 20px;
+    }
+}
+@media(max-width: 950px){
+    .Register__header button span{
+        display: none;
+    }
+    .Register__header__out__btn span{
+        display: none;
+    }
+}
+@media(max-width:670px){
+    .Register__header button{
+        padding:10px;
+    }
+    .Register__nav{
+        gap: 10px;
+    }
+}
+@media(max-width:360px){
+   .Register__logo{
+    display: none;
+   }
+}
+
+@media(max-width:280px){
+    .Register__header{
+        padding: 10px 5px;
+    }
+}

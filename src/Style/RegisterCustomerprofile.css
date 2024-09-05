@@ -1,0 +1,55 @@
+.RegisterCustomerProfile__main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.RegisterCustomerProfile__main__info{
+    width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+.RegisterCustomerProfile__main__add{
+    width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+.RegisterCustomerProfile__main__info h1{
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.RegisterCustomerProfile__main__info__grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.RegisterCustomerProfile__main__info__grid h3{
+    font-size: 25px;
+}
+.RegisterCustomerProfile__main__info__grid span{
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+@media(max-width:425px){
+    .RegisterCustomerProfile__main__info h1{
+        font-size: 22px;
+    }
+    .RegisterCustomerProfile__main__info h3{
+        font-size: 18px;
+    }
+    .RegisterCustomerProfile__main__info span{
+        font-size: 15px;
+    }
+}

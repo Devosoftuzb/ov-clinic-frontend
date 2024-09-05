@@ -1,0 +1,59 @@
+.AdminHome{
+    margin-left: 300px;
+}
+.AdminHome__main{
+    padding: 20px;
+ }
+ .AdminHome__main__wrapper__card{
+     background-color: white;
+     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+     border: 1px solid #DCE1EF;
+     border-radius: 10px;
+     padding: 20px 10px;
+ }
+ .AdminHome__main__wrapper__card__grid{
+     display: flex;
+     align-items: center;
+     
+     gap: 4px;
+ }
+ .AdminHome__main__wrapper__card__grid svg{
+     font-size: 45px;
+     fill: var(--text-color);
+ }
+ .AdminHome__main__wrapper__card__grid span{
+     font-size: 22px;
+     font-weight: bold;
+     color: var(--text-color);
+ }
+ .AdminHome__main__wrapper__card{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .AdminHome__main__wrapper{
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     gap: 30px;
+ }
+ 
+ @media(max-width:1415px){
+    .AdminHome__main__wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+ }
+@media(max-width:900px){
+    .AdminHome{
+        margin-left: 0;
+    }
+}
+@media(max-width:550px){
+    .AdminHome__main__wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media(max-width:280px){
+    .AdminHome__main__wrapper__card span{
+        font-size: 15px;
+    }
+}

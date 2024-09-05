@@ -1,0 +1,86 @@
+.Login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Login__wrapper{
+    width: 25%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+}
+.Login img{
+    width: 200px;
+}
+.Login form{
+    width: 100%;
+    height: 100%;
+}
+.Login__logo{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Login label{
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+.Login label span{
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 2px;
+    font-size: 23px;
+    cursor: pointer;
+}
+.Login input{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #DCE1EF;
+    outline-color: #2563EB;
+}
+.Login button{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #2563EB;
+    padding: 10px 20px;
+    background-color: #2563EB;
+    color: white;
+    font-size: 15px;
+    transition: 0.5s;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.Login form button:hover{
+    background-color: transparent;
+    color: #2563EB;
+}
+@media(max-width:1150px){
+    .Login__wrapper{
+        width: 40%;
+    }
+}
+@media(max-width:900px){
+    .Login__wrapper{
+        width: 60%;
+    }
+}
+@media(max-width:600px){
+    .Login__wrapper{
+        width: 80%;
+    }
+}
+@media(max-width:430px){
+    .Login__wrapper{
+        width: 90%;
+    }
+    .Login img{
+        width: 100%;
+    }
+}

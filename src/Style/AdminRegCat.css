@@ -1,0 +1,38 @@
+.AdminRegCat{
+    margin-left: 300px;
+    padding: 20px;
+}
+.adminRegCat{
+    margin-top: 10px;
+}
+.adminRegCat h2{
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+.register__z{
+    position: relative;
+    z-index: 11;
+}
+@media(max-width:1000px){
+    .AdminRegCat{
+        margin-left: 0px;
+    }
+}
+@media(max-width:600px){
+    .AdminRegCat{
+        padding: 5px;
+    }
+}
+@media(max-width:480px){
+    .AdminRegCat table h3{
+        font-size: 15px;
+    }
+}
+@media(max-width:380px){
+    .RegCat__table{
+        overflow-x: scroll;
+    }
+    .RegCat__table table{
+        width: 390px;
+    }
+}
