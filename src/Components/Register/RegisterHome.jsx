@@ -20,14 +20,13 @@ function RegisterHome() {
     setIskskidChecked(event.target.checked);
   };
   let skidka_presents = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-  console.log(skidka_presents);
 
   // THESE HAVE BEEN USED FOR HTML structure.
 
   // THERE WERE USED AS fake API
 
   let historyPatent = Array.from({ length: 15 }, (y = 30, x) => x + 1 + y);
-  let doctors = Array.from({ length: 30 }, (y, x) => x + 1 + y);
+  let doctors = Array.from({ length: 30 }, (y, x) => x + 1+ y);
   let rooms = Array.from({ length: 32 }, (y, x) => x + 1 + y);
   let in_room = {
     name: "1-qavat, 23-xona",

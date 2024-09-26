@@ -1,12 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AlignmentType, Document, Packer, Paragraph, TextRun } from 'docx'
 import { saveAs } from 'file-saver'
 import { Bounce, toast, ToastContainer } from 'react-toastify'
-import '../../Style/DayDoctor.css'
-import { useState } from 'react'
 
 
-function DayDoctor() {
+function DoctorInpatients() {
     // HTML structure
     const [isModal, setModal] = useState(1);
     const [showPerson, setShowPerson] = useState({})
@@ -431,149 +429,121 @@ function DayDoctor() {
 
 
     return (
-        <div className='DayDoctor' style={{ padding: "0 10px" }}>
-            {isModal === 1 && (
-                <div className='DayDoctor__main'>
-                    <div className='DayDoctor__main__content'>
-                        <h1>
-                            За сегодня:
-                        </h1>
-                        <div className='DayDoctor__grid'>
-                            <h3>
-                                Сегодняшняя очередь:
-                            </h3>
-                            <span>
-                                65
-                            </span>
+        <div>
+            <div className='Doctor__main'>
+                {isModal === 1 && (
+                    <div>
+                        <div className='Register__history__header'>
+                            <div className='register_history_form'>
+                                <h1>Поиск по историй </h1>
+                                <label htmlFor="Search">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0"></path></svg>
+                                    </button>
+                                    <input placeholder='Поиск...' id='Search' type="text" />
+                                </label>
+                            </div>
+                            <div className="register_history_from">
+                                <h1>Поиск по дате</h1>
+                                <label htmlFor="Search">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0"></path></svg>
+                                    </button>
+                                    <input placeholder='Enter date' id='sort_by_date' type="date" />
+                                </label>
+                            </div>
                         </div>
-                        <div className='DayDoctor__grid'>
-                            <h3>
-                                Осмотренных:
-                            </h3>
-                            <span>
-                                15
-                            </span>
-                        </div>
-                        <div className='DayDoctor__grid'>
-                            <h3>
-                                Не осмотренных:
-                            </h3>
-                            <span>
-                                50
-                            </span>
-                        </div>
-                        <div className='DayDoctor__grid'>
-                            <h3>
-                                В процессе:
-                            </h3>
-                            <span style={{ color: "chocolate" }}>
-                                6
-                            </span>
-                        </div>
-                    </div>
-                    <div className="DayDoctor__main__content proce process_top">
-                        <h1>Список пациентов в процессе работы:</h1>
-                        <div className="search_box_day_doctor">
-                            <label htmlFor="Search">
-                                <button>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0a5.5 5.5 0 0 1 11 0"></path></svg>
-                                </button>
-                                <input placeholder='Поиск прогресса...' id='Search' type="text" />
-                            </label>
-                        </div>
-                    </div>
-                    <div className='Kassa__main__table'>
-                        <table>
-                            <thead>
-                                <tr >
-                                    <th className='Register__table__number'>
-                                        <h3>
-                                            #
-                                        </h3>
-                                    </th>
-                                    <th>
-                                        <h3>
-                                            Ф.И.О
-                                        </h3>
-                                    </th>
-                                    <th>
-                                        <h3>
-                                            Дата
-                                        </h3>
-                                    </th>
-                                    <th>
-                                        <h3>
-                                            № Очередь
-                                        </h3>
-                                    </th>
-                                    <th>
-                                        <h3>
-                                            Сумма
-                                        </h3>
-                                    </th>
-                                    <th className='Register__table__setings2'>
-                                        <h3>Удалить</h3>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody >
-                                {myStatsionars?.map((item, index) => {
-                                    return (
-                                        <tr key={index} id={item.id} onClick={() => openModal(item.id)}>
-                                            <td>
-                                                <h3>
-                                                    {index + 1}
-                                                </h3>
-                                            </td>
-                                            <td>
-                                                <h3>
-                                                    {item.name}
-                                                </h3>
-                                            </td>
-                                            <td>
-                                                <h3>
-                                                    {item.birthDate}
-                                                </h3>
-                                            </td>
-                                            <td>
-                                                <h3>
-                                                    {item.roomNumber}
-                                                </h3>
-                                            </td>
-                                            <td>
-                                                <h3 >
-                                                    83 000
-                                                </h3>
-                                            </td>
-                                            <td style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-                                                <span>
-                                                <svg fill="red" width="28px" height="28px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg" stroke="red" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.096"></g><g id="SVGRepo_iconCarrier"><path d="M22,5H17V2a1,1,0,0,0-1-1H8A1,1,0,0,0,7,2V5H2A1,1,0,0,0,2,7H3.117L5.008,22.124A1,1,0,0,0,6,23H18a1,1,0,0,0,.992-.876L20.883,7H22a1,1,0,0,0,0-2ZM9,3h6V5H9Zm8.117,18H6.883L5.133,7H18.867Z"></path></g></svg>
+                        <div className='Kassa__main__table'>
+                            <table>
+                                <thead>
+                                    <tr >
+                                        <th className='Register__table__number'>
+                                            <h3>
+                                                #
+                                            </h3>
+                                        </th>
+                                        <th>
+                                            <h3>
+                                                Ф.И.О
+                                            </h3>
+                                        </th>
+                                        <th>
+                                            <h3>
+                                                Дата рождения
+                                            </h3>
+                                        </th>
+                                        <th>
+                                            <h3>
+                                                Номер палаты
+                                            </h3>
+                                        </th>
+                                        <th>
+                                            <h3>
+                                                Дата поступления
+                                            </h3>
+                                        </th>
+                                        <th className='Register__table__setings2'>
+                                            <h3>
+                                                Дата выписки
+                                            </h3>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    {myStatsionars?.map((item, index) => {
+                                        return (
+                                            <tr key={index} id={item.id} onClick={() => openModal(item.id)}>
+                                                <td>
+                                                    <h3>
+                                                        {index + 1}
+                                                    </h3>
+                                                </td>
+                                                <td>
+                                                    <h3>
+                                                        {item.name}
+                                                    </h3>
+                                                </td>
+                                                <td>
+                                                    <h3>
+                                                        {item.birthDate}
+                                                    </h3>
+                                                </td>
+                                                <td>
+                                                    <h3>
+                                                        {item.roomNumber}
+                                                    </h3>
+                                                </td>
+                                                <td>
+                                                    <h3 >
+                                                        {item.admissionDate}
+                                                    </h3>
+                                                </td>
+                                                <td>
+                                                    <h3>
+                                                        {item.dischargeDate}
+                                                    </h3>
+                                                </td>
+                                            </tr>
+                                        )
+                                    })}
 
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    )
-                                })}
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="register_history_pagin">
-                        <div className="container_pagin">
-                            <div className="register_history_wrap">
-                                <button type="button">предыдущий</button>
-                                <p>страница: <span>3</span>  /12</p>
-                                <button type="button">следующий</button>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="register_history_pagin">
+                            <div className="container_pagin">
+                                <div className="register_history_wrap">
+                                    <button type="button">предыдущий</button>
+                                    <p>страница: <span>3</span>  /12</p>
+                                    <button type="button">следующий</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            )
-            }
-            {
-                isModal === 2 && (
+                )}
+                {isModal === 2 && (
                     <div>
-                        <div className='Kassa__info__header' style={{ marginTop: "12px" }}>
+                        <div className='Kassa__info__header'>
                             <h1>
                                 Кабинет пациента
                             </h1>
@@ -619,6 +589,41 @@ function DayDoctor() {
                                     </span>
                                 </div>
                             </div>
+                            <div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Пасспорт:
+                                    </h3>
+                                    <span>
+                                        AC7442015
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Номер палаты
+                                    </h3>
+                                    <span>
+                                        {showPerson.roomNumber}
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Дата поступления:
+                                    </h3>
+                                    <span>
+                                        {showPerson.admissionDate}
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Дата выписки:
+                                    </h3>
+                                    <span className='Kassa__info__grid__money'>
+                                        {showPerson.dischargeDate}
+                                    </span>
+                                </div>
+                            </div>
+
                         </div>
                         <table className='patient_labaratory_services'>
                             <thead>
@@ -643,12 +648,10 @@ function DayDoctor() {
                         </table>
                     </div>
 
-                )
-            }
-            {
-                isModal === 3 && (
+                )}
+                {isModal === 3 && (
                     <div>
-                        <div className='Kassa__info__header' style={{ marginTop: "12px" }}>
+                        <div className='Kassa__info__header'>
                             <h1>
                                 Кабинет пациента
                             </h1>
@@ -694,6 +697,41 @@ function DayDoctor() {
                                     </span>
                                 </div>
                             </div>
+                            <div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Пасспорт:
+                                    </h3>
+                                    <span>
+                                        AC7442015
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Номер палаты
+                                    </h3>
+                                    <span>
+                                        {showPerson.roomNumber}
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Дата поступления:
+                                    </h3>
+                                    <span>
+                                        {showPerson.admissionDate}
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Дата выписки:
+                                    </h3>
+                                    <span className='Kassa__info__grid__money'>
+                                        {showPerson.dischargeDate}
+                                    </span>
+                                </div>
+                            </div>
+
                         </div>
                         <div className='table_multi'>
                             <div className='table_multi_head'>
@@ -755,16 +793,13 @@ function DayDoctor() {
                             </button>
                         </div>
                     </div>
-                )
-            }
-            {
-                isModal === 4 && (
+                )}
+                {isModal === 4 && (
                     <div>
-                        <div className='Kassa__info__header' style={{ marginTop: "12px" }}>
+                        <div className='Kassa__info__header'>
                             <h1>
                                 Кабинет пациента
                             </h1>
-
                             <button className='Kass__info__header__btn' onClick={(e) => openPatientTable(e)}>
                                 <svg className='Register__main__out__btn2__svg2' xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><path fillRule="evenodd" strokeLinejoin="round" strokeWidth={4} d="M44 40.836c-4.893-5.973-9.238-9.362-13.036-10.168c-3.797-.805-7.412-.927-10.846-.365V41L4 23.545L20.118 7v10.167c6.349.05 11.746 2.328 16.192 6.833c4.445 4.505 7.009 10.117 7.69 16.836Z" clipRule="evenodd"></path></svg>
                                 <span className='Kass__info__header__btn__span'>
@@ -807,6 +842,41 @@ function DayDoctor() {
                                     </span>
                                 </div>
                             </div>
+                            <div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Пасспорт:
+                                    </h3>
+                                    <span>
+                                        AC7442015
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Номер палаты
+                                    </h3>
+                                    <span>
+                                        {showPerson.roomNumber}
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Дата поступления:
+                                    </h3>
+                                    <span>
+                                        {showPerson.admissionDate}
+                                    </span>
+                                </div>
+                                <div className='Kassa__info__grid'>
+                                    <h3>
+                                        Дата выписки:
+                                    </h3>
+                                    <span className='Kassa__info__grid__money'>
+                                        {showPerson.dischargeDate}
+                                    </span>
+                                </div>
+                            </div>
+
                         </div>
                         <div className='table_multi_head table_multi'>
                             <h1> <span> Allergolog </span>  konsultatsiya</h1>
@@ -849,11 +919,10 @@ function DayDoctor() {
                             <p>{naznocheny}</p>
                         </div>
                     </div>
-                )
-            }
-
-        </div >
+                )}
+            </div>
+        </div>
     )
 }
 
-export default DayDoctor
+export default DoctorInpatients

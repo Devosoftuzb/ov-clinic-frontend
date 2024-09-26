@@ -23,6 +23,8 @@ import LabaratoryPage from './Components/Labaratory/LabaratoryPage';
 import LabaratoryActive from './Components/Labaratory/LabaratoryActive';
 import LabaratoryHistory from './Components/Labaratory/LabaratoryHistory';
 import LabaratoryState from './Components/Labaratory/LabaratoryState';
+import DoctorPage from './Components/Doctor/DoctorPage';
+import DoctorInpatients from './Components/Doctor/DoctorInpatients';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -34,7 +36,8 @@ const appRouter = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Login />
+                element: <Login />,
+                
             },
             // Регистрация начало 
             {
@@ -67,15 +70,25 @@ const appRouter = createBrowserRouter([
             // Доктор начало 
             {
                 path: '/doctor',
-                element: <Doctor />
-            },
-            {
-                path: '/doctorHistory',
-                element: <DoctorHistory />
-            },
-            {
-                path: '/doctorDay',
-                element: <DayDoctor />
+                element: <DoctorPage/>,
+                children:[
+                    {
+                        path:"/doctor",
+                        element:<Doctor/>,
+                    },
+                    {
+                        path:"/doctor/history",
+                        element:<DoctorHistory/>,
+                    },
+                    {
+                        path:"/doctor/day",
+                        element:<DayDoctor/>,
+                    },
+                    {
+                        path:"/doctor/inpatients",
+                        element:<DoctorInpatients/>
+                    }
+                ]
             },
             // Доктор конец
             {   
@@ -83,7 +96,7 @@ const appRouter = createBrowserRouter([
                 element:<LabaratoryPage/>,
                 children:[
                     {
-                        path:"/labaratory/active",
+                        path:"/labaratory",
                         element:<LabaratoryActive/>
                     },
                     {

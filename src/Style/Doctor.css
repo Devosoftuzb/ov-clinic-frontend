@@ -53,6 +53,54 @@
     border: none;
     background-color: transparent;
 }
+.doctor_inpatients_info {
+    display: flex;
+    gap: 90px;
+    width: 100%;
+    padding: 20px 60px 10px;
+}
+.doctor_inpatients_info .Kassa__info__grid {
+    justify-content: flex-start;
+}
+.my_stat_histor_resultat {
+    background: linear-gradient(125deg, rgba(0, 255, 255, 0.123), rgba(13, 255, 13, 0.481));
+}
+.search_box_day_doctor input {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid var(--bg-modal);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    outline-color: #2563EB;
+}
+.search_box_day_doctor label svg {
+    font-size: 20px;
+    color: var(--bg-modal);
+    fill: black
+}
+.search_box_day_doctor button {
+    border: 2px solid var(--bg-modal);
+    padding: 6.5px;
+    background-color: transparent;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.search_box_day_doctor label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.process_top {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+
+
 @media(max-width:1050px){
     .Doctor__main{
         padding: 5px;

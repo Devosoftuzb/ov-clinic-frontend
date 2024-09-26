@@ -3,8 +3,97 @@
 }
 .labaratory_patient_status {
     padding: 10px 20px;
-    /* background: linear-gradient(90deg, rgb(2, 174, 2) 35px, white 40px); */
-    background: radial-gradient(green 39%, blue);
+    /* background: linear-gradient(90deg, rgb(2, 174, 2) 33%, white 40px); */
+    /* background: radial-gradient(green 39%, blue); */
     border-radius: 10px;
     border: 2px solid rgb(7, 235, 7);
+    position: relative;
+    z-index: 11;
+}
+.labaratory_width_box_dynamic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgb(2, 174, 2);
+    z-index: -1;
+}
+.box_border_red {
+    border: 2px solid red;
+}
+.box_color_red {
+    background-color: rgb(251, 44, 44);
+    border-radius: 8px;
+    z-index: -2;
+}
+.box-end-radius {
+    border-radius: 8px;
+}
+.patient_labaratory_services {
+    width: 100%;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .16);
+    border: 1px solid #DCE1EF;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    margin: 20px auto 40px;
+}
+.patient_labaratory_services  thead tr th {
+    background-color: #F8F8F8;
+    border: 1px solid #DCE1EF;
+    padding: 5px 15px;
+}
+.patient_labaratory_services .head_distance_lab_serv{
+    height: 10px;
+}
+.patient_labaratory_services tbody tr td h3 {
+    text-align: center;
+}
+.patient_labaratory_services tbody tr td {
+    padding: 10px;
+}
+.patient_labaratory_services tbody tr:hover {
+    background-color: rgba(128, 128, 128, 0.267);
+}
+.patient_labaratory_services .service_status_icon {
+    width: 20px;
+    height: 20px;
+    background-color: chocolate;
+    display: block;
+    border-radius: 50%;
+}
+.status_lab_check {
+    background-color: rgb(2, 174, 2);
+}
+.box_text_color {
+    color: white !important;
+}
+
+.labaratory_final_btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    margin: 40px auto 60px;
+}
+.labaratory_final_btns button {
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid var(--button-color);
+    background-color: var(--button-color);
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+.labaratory_final_btns button:active {
+    scale: 0.95;
 }
